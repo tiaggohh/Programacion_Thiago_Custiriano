@@ -1,7 +1,7 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
 # Ejercicio_Cadenas_4: Crear una funcion que reciba como parametro 
-una cadena y suprima los caracteres repetidos consecutivos.
+#una cadena y suprima los caracteres repetidos consecutivos.
 
 def suprimir_repetidos_consecutivos(cadena):
     if cadena == "":
