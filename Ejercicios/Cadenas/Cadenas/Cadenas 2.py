@@ -1,11 +1,14 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_1: Crear una función que le solicite al usuario el 
-# ingreso de un numero entero y lo retorne.
+# Ejercicio_Cadenas_2: Crear una funcion que reciba una cadena y un caracter 
+La funcion debera devolver el indice en el que se encuentre la primera ocurrencia de dicho caracter o -1 en caso de que no este.
 
-def pedir_entero():
-    numero = int(input("Ingrese un numero entero: "))
-    return numero
+def encontrar_indice(cadena, caracter):
+    for i in range(len(cadena)):
+        if cadena[i] == caracter:
+            return i
+    return -1
 
-n = pedir_entero()
-print("Numero ingresado:", n)
+
+print(encontrar_indice("murcielago", "e"))  # 5
+print(encontrar_indice("murcielago", "z"))  # -1
