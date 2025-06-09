@@ -1,11 +1,13 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_2: Crear una función que le solicite al usuario el 
-# ingreso de un numero flotante y lo retorne.
+# Ejercicio_Cadenas_3: Crear una funcion que reciba como parametro una cadena y
+determine si la misma es o no un palindromo Debera retornar un valor booleano indicando lo sucedido.
 
-def pedir_flotante():
-    numero = float(input("Ingrese un numero con decimales: "))
-    return numero
+def es_palindromo(cadena):
+    cadena = cadena.lower()
+    cadena = cadena.replace(" ", "")
+    return cadena == cadena[::-1]
 
-n = pedir_flotante()
-print("Numero ingresado:", n)
+
+print(es_palindromo("anita lava la tina"))  # True
+print(es_palindromo("hola"))  # False
