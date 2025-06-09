@@ -1,11 +1,19 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_3: Crear una función que le solicite al usuario el 
-# ingreso de una cadena y la retorne.
+# Ejercicio_Cadenas_4: Crear una funcion que reciba como parametro 
+una cadena y suprima los caracteres repetidos consecutivos.
 
-def pedir_cadena():
-    texto = input("Ingrese una cadena de texto: ")
-    return texto
+def suprimir_repetidos_consecutivos(cadena):
+    if cadena == "":
+        return ""
 
-cadena = pedir_cadena()
-print("Texto ingresado:", cadena)
+    resultado = cadena[0]
+
+    for i in range(1, len(cadena)):
+        if cadena[i] != cadena[i - 1]:
+            resultado += cadena[i]
+
+    return resultado
+
+
+print(suprimir_repetidos_consecutivos("Hooola"))  # Hola
