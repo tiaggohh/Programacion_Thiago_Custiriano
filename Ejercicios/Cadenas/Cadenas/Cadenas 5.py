@@ -1,12 +1,14 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_4: Escribir una función que calcule el area de un 
-# rectangulo. La función recibe la base y la altura y retorna el area.
+# Ejercicio_Cadenas_5: Crear una funcion que reciba una 
+#cadena por parametro y suprima las vocales de la misma.
 
-def calcular_area_rectangulo(base, altura):
-    return base * altura
+def eliminar_vocales(cadena):
+    resultado = ""
+    for letra in cadena:
+        if letra.lower() not in "aeiou":
+            resultado += letra
+    return resultado
 
-base = float(input("Ingrese la base del rectangulo: "))
-altura = float(input("Ingrese la altura del rectangulo: "))
-area = calcular_area_rectangulo(base, altura)
-print("El area del rectangulo es:", area)
+
+print(eliminar_vocales("Hola"))  # Hl
