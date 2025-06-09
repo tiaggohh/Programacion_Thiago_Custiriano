@@ -1,11 +1,17 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_1: Crear una función que le solicite al usuario el 
-# ingreso de un numero entero y lo retorne.
+# Ejercicio_Cadenas_1: Crear una funcion que reciba como parametro una cadena y 
+determine la cantidad de vocales que hay de cada una individualmente.
 
-def pedir_entero():
-    numero = int(input("Ingrese un numero entero: "))
-    return numero
+def contar_vocales(cadena):
+    cadena = cadena.lower()
+    vocales = ['a', 'e', 'i', 'o', 'u']
+    resultado = []
 
-n = pedir_entero()
-print("Numero ingresado:", n)
+    for vocal in vocales:
+        cantidad = cadena.count(vocal)
+        resultado.append([vocal, cantidad])
+    
+    return resultado
+
+print(contar_vocales("murcielaguito"))
