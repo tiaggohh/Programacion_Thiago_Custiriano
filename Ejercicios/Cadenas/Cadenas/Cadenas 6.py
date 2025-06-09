@@ -1,11 +1,9 @@
 # Nombre y apellido: Thiago Custiriano
 # Div: 211
-# Ejercicio_Funciones_5: Escribir una función que calcule el área de un 
-# circulo. La función debe recibir el radio como parámetro y devolver el área.
+# Ejercicio_Cadenas_6: Crear una funcion para contar cuantas veces aparece una subcadena dentro de una cadena.
 
-def calcular_area_circulo(radio):
-    return 3.14 * radio * radio
+def contar_subcadena(cadena, subcadena):
+    return cadena.count(subcadena)
 
-radio = float(input("Ingrese el radio del circulo: "))
-area = calcular_area_circulo(radio)
-print("El área del circulo es:", area)
+
+print(contar_subcadena("El pan del panadero", "pan"))  # 2
